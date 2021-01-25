@@ -715,7 +715,7 @@ namespace Cysharp.Threading.Tasks.Triggers
 #endregion
 
 #region CollisionEnter
-#if ENABLE_PHYSICS
+#if PHYSICS_MODULE
     public interface IAsyncOnCollisionEnterHandler
     {
         UniTask<Collision> OnCollisionEnterAsync();
@@ -834,7 +834,7 @@ namespace Cysharp.Threading.Tasks.Triggers
 #endregion
 
 #region CollisionExit
-#if ENABLE_PHYSICS
+#if PHYSICS_MODULE
     public interface IAsyncOnCollisionExitHandler
     {
         UniTask<Collision> OnCollisionExitAsync();
@@ -953,7 +953,7 @@ namespace Cysharp.Threading.Tasks.Triggers
 #endregion
 
 #region CollisionStay
-#if ENABLE_PHYSICS
+#if PHYSICS_MODULE
     public interface IAsyncOnCollisionStayHandler
     {
         UniTask<Collision> OnCollisionStayAsync();
