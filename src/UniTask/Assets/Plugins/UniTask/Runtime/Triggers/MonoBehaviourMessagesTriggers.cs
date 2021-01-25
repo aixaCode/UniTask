@@ -715,7 +715,7 @@ namespace Cysharp.Threading.Tasks.Triggers
 #endregion
 
 #region CollisionEnter
-
+#if ENABLE_PHYSICS
     public interface IAsyncOnCollisionEnterHandler
     {
         UniTask<Collision> OnCollisionEnterAsync();
@@ -771,6 +771,7 @@ namespace Cysharp.Threading.Tasks.Triggers
             return ((IAsyncOnCollisionEnterHandler)new AsyncTriggerHandler<Collision>(this, cancellationToken, true)).OnCollisionEnterAsync();
         }
     }
+#endif
 #endregion
 
 #region CollisionEnter2D
@@ -833,7 +834,7 @@ namespace Cysharp.Threading.Tasks.Triggers
 #endregion
 
 #region CollisionExit
-
+#if ENABLE_PHYSICS
     public interface IAsyncOnCollisionExitHandler
     {
         UniTask<Collision> OnCollisionExitAsync();
@@ -889,6 +890,7 @@ namespace Cysharp.Threading.Tasks.Triggers
             return ((IAsyncOnCollisionExitHandler)new AsyncTriggerHandler<Collision>(this, cancellationToken, true)).OnCollisionExitAsync();
         }
     }
+#endif
 #endregion
 
 #region CollisionExit2D
@@ -951,7 +953,7 @@ namespace Cysharp.Threading.Tasks.Triggers
 #endregion
 
 #region CollisionStay
-
+#if ENABLE_PHYSICS
     public interface IAsyncOnCollisionStayHandler
     {
         UniTask<Collision> OnCollisionStayAsync();
@@ -1007,6 +1009,7 @@ namespace Cysharp.Threading.Tasks.Triggers
             return ((IAsyncOnCollisionStayHandler)new AsyncTriggerHandler<Collision>(this, cancellationToken, true)).OnCollisionStayAsync();
         }
     }
+#endif
 #endregion
 
 #region CollisionStay2D
